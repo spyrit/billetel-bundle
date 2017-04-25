@@ -1,0 +1,25 @@
+{
+    "name": "spyrit/billetel-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle for Billetel client",
+    "homepage": "http://www.spyrit.net",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Spyrit",
+            "email": "support@spyrit.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": "~2.3|~3.0",
+        "spyrit/billetel": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spyrit\\BilletelBundle\\":""
+        }
+    }
+}

@@ -1,0 +1,24 @@
+services:
+    guzzle.http_client.class:
+        class:  GuzzleHttp\Client
+    billetel.base:
+        abstract:  true
+        arguments: ['%api_url%', '%api_authorization%', '%api_desk%', '@guzzle.http_client.class']
+    billetel.artists:
+        class:  Spyrit\Billetel\Client\ArtistsClient
+        parent: billetel.base
+    billetel.categories:
+        class:  Spyrit\Billetel\Client\CategoriesClient
+        parent: billetel.base
+    billetel.events:
+        class:  Spyrit\Billetel\Client\EventsClient
+        parent: billetel.base
+    billetel.groups:
+        class:  Spyrit\Billetel\Client\GroupsClient
+        parent: billetel.base
+    billetel.places:
+        class:  Spyrit\Billetel\Client\PlacesClient
+        parent: billetel.base
+    billetel.ticket_offices:
+        class:  Spyrit\Billetel\Client\TicketOfficesClient
+        parent: billetel.base
