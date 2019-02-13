@@ -23,6 +23,7 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('api_authorization')->cannotBeEmpty()->isRequired()->end()
             ->scalarNode('api_desk')->cannotBeEmpty()->isRequired()->end()
             ->scalarNode('api_url')->cannotBeEmpty()->isRequired()->end()
+            ->scalarNode('api_booking_url')->cannotBeEmpty()->isRequired()->end()
             ->end();
         return $treeBuilder;
     }

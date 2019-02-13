@@ -26,5 +26,6 @@ class BilletelExtension extends Extension
         $container->setParameter('api_authorization', $config['api_authorization']);
         $container->setParameter('api_desk', $config['api_desk']);
         $container->setParameter('api_url', $config['api_url']);
+        $container->setParameter('api_booking_url', $config['api_url']);
     }
 }
