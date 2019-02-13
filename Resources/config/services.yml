@@ -26,18 +26,18 @@ services:
     billetel.booking.base:
         abstract: true
         arguments: ['%api_booking_url%', '%api_authorization%', '%api_desk%', '@guzzle.http_client.class']
-        billetel.booking.availability:
-            class: Spyrit\Billetel\Client\BookingAvailabilityClient
-            parent: billetel.booking.base
-        billetel.booking.cart:
-            class: Spyrit\Billetel\Client\CartClient
-            parent: billetel.booking.base
-        billetel.booking.client:
-            class: Spyrit\Billetel\Client\ClientClient
-            parent: billetel.booking.base
-        billetel.booking.order:
-            class: Spyrit\Billetel\Client\OrderClient
-            parent: billetel.booking.base
-        billetel.booking.ticket:
-            class: Spyrit\Billetel\Client\TicketClient
-            parent: billetel.booking.base
+    billetel.booking.availability:
+        class: Spyrit\Billetel\Client\BookingAvailabilityClient
+        parent: billetel.booking.base
+    billetel.booking.cart:
+        class: Spyrit\Billetel\Client\CartClient
+        parent: billetel.booking.base
+    billetel.booking.client:
+        class: Spyrit\Billetel\Client\ClientClient
+        parent: billetel.booking.base
+    billetel.booking.order:
+        class: Spyrit\Billetel\Client\OrderClient
+        parent: billetel.booking.base
+    billetel.booking.ticket:
+        class: Spyrit\Billetel\Client\TicketClient
+        parent: billetel.booking.base
