@@ -15,7 +15,7 @@
     "require": {
         "php": ">=5.4.0",
         "symfony/framework-bundle": "~2.3|~3.0|~4.0",
-        "spyrit/billetel": "dev-master"
+        "spyrit/billetel": "dev-symfony4"
     },
     "autoload": {
         "psr-4": {
