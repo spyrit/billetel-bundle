@@ -17,8 +17,15 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('billetel', 'array')
+        $treeBuilder = new TreeBuilder('billetel');
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $rootNode = $treeBuilder->root('billetel');
+        }
+
+        $rootNode
             ->children()
             ->scalarNode('api_authorization')->cannotBeEmpty()->isRequired()->end()
             ->scalarNode('api_desk')->cannotBeEmpty()->isRequired()->end()
